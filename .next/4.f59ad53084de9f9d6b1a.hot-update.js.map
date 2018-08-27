@@ -1,0 +1,1 @@
+{"version":3,"file":"4.f59ad53084de9f9d6b1a.hot-update.js","sources":["webpack:///components/Duties.js"],"sourcesContent":["const Duties = props => <div>test</div>;\n\nexport default Duties;\n\n\n\n// WEBPACK FOOTER //\n// components/Duties.js"],"mappings":";;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AACA;AACA;;;;A","sourceRoot":""}

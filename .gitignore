@@ -11,6 +11,7 @@ log.txt
 npm-debug.log*
 
 .idea/
+.next
 .sass-cache/
 .sourcemaps/
 .tmp/

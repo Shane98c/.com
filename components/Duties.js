@@ -8,7 +8,12 @@ const Duties = props => (
         display: flex;
         justify-content: space-around;
         flex-flow: row wrap;
-        margin: 10px;
+        margin-top: 10px;
+        border-bottom: 1px solid;
+        padding: 0 20px 5px 20px;
+      }
+      span {
+        font-weight: 200;
       }
     `}</style>
   </div>

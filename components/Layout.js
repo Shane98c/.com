@@ -2,7 +2,8 @@ import Header from "./Header";
 
 const layoutStyle = {
   padding: 20,
-  fontFamily: "Verdana"
+  fontFamily: "Helvetica",
+  fontWeight: "100"
 };
 
 const Layout = props => (

@@ -11,7 +11,7 @@ const Highlight = props => (
 
       <style jsx>{`
         .highlight {
-          padding: 0 20px 5px 20px;
+          padding: 20px 20px 5px 20px;
           display: grid;
         }
         .titles {
@@ -19,7 +19,6 @@ const Highlight = props => (
         }
         img {
           width: 100%;
-          left: 0;
           grid-column-end: 1;
         }
         .title {
@@ -27,7 +26,7 @@ const Highlight = props => (
           font-size: 180%;
           font-weight: bold;
           grid-column-start: 3;
-          grid-column-end: 3;
+          color: ${props.color};
         }
         .sub {
           text-align: right;

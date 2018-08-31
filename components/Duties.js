@@ -11,9 +11,7 @@ const Duties = props => (
         margin-top: 10px;
         border-bottom: 1px solid;
         padding: 0 20px 5px 20px;
-      }
-      span {
-        font-weight: 200;
+        font-size: 0.9em;
       }
     `}</style>
   </div>

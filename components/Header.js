@@ -19,12 +19,9 @@ const Header = () => (
       <Link href="/photos">
         <a style={linkStyle}>Photography</a>
       </Link>
-      {/* <Link href="/Communication">
-        <a style={linkStyle}>Communication</a>
+      <Link href="/education">
+        <a style={linkStyle}>Education</a>
       </Link>
-      <Link href="/Service">
-        <a style={linkStyle}>Service</a>
-      </Link> */}
     </div>
 
     <style jsx>{`

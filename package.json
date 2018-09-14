@@ -1,7 +1,16 @@
 {
-    "scripts": {
-      "dev": "next",
-      "build": "next build",
-      "start": "next start"
-    }
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^7.0.0-canary.16",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "styled-components": "^3.4.6"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.7.1"
   }
+}

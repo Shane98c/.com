@@ -1,3 +1,4 @@
+import * as React from "react";
 import Layout from "../components/Layout";
 import Highlight from "../components/Highlight";
 
@@ -20,6 +21,7 @@ export default () => (
         link="https://flyovercountry.io"
         duties={["concept", "design", "development", "funding"]}
         color="#005ead"
+        side="right"
       />
       <Highlight
         img="../static/img/FC.png"
@@ -28,6 +30,7 @@ export default () => (
         link="https://shane98c.github.io/MNsight/"
         duties={["concept", "design", "development"]}
         color="#7A0019"
+        side="left"
       />
     </Layout>
     <style jsx>{`

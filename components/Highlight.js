@@ -1,43 +1,63 @@
 import Duties from "./Duties";
+import styled from "styled-components";
 
-const Highlight = props => (
-  <div>
+const Wrapper = styled.div`
+  .highlight {
+    padding: 20px 20px 5px 20px;
+    display: grid;
+  }
+  .titles {
+    display: grid;
+  }
+  img {
+    width: 100%;
+  }
+  .title {
+    font-size: 180%;
+    font-weight: bold;
+    color: ${({ color }) => color || "white"};
+  }
+  nth-child(odd) {
+    img {
+      grid-column-end: 3;
+    }
+    .title {
+      text-align: left;
+      grid-column-start: 1;
+    }
+    .sub {
+      text-align: left;
+      margin-right: 0;
+      grid-column-start: 1;
+    }
+  }
+  nth-child(even) {
+    img {
+      grid-column-end: 1;
+    }
+    .title {
+      text-align: left;
+      grid-column-start: 1;
+    }
+    .sub {
+      text-align: left;
+      margin-right: 0;
+      grid-column-start: 1;
+    }
+  }
+`;
+
+const Highlight = ({ title, sub, img, duties, ...rest }) => (
+  <Wrapper {...rest}>
     <div className="highlight">
-      <img src={props.img} />
+      <img src={img} />
       <div className="titles">
-        <div className="title">{props.title}</div>
-        <div className="sub">{props.sub}</div>
+        <div className="title">{title}</div>
+        <div className="sub">{sub}</div>
       </div>
-
-      <style jsx>{`
-        .highlight {
-          padding: 20px 20px 5px 20px;
-          display: grid;
-        }
-        .titles {
-          display: grid;
-        }
-        img {
-          width: 100%;
-          grid-column-end: 1;
-        }
-        .title {
-          text-align: right;
-          font-size: 180%;
-          font-weight: bold;
-          grid-column-start: 3;
-          color: ${props.color};
-        }
-        .sub {
-          text-align: right;
-          margin-right: 0;
-          grid-column-start: 3;
-          grid-column-end: 3;
-        }
-      `}</style>
     </div>
-    <Duties duties={props.duties} />
-  </div>
+    <Duties duties={duties} />
+  </Wrapper>
 );
 
 export default Highlight;

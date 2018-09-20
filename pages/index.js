@@ -2,6 +2,30 @@ import * as React from "react";
 import Layout from "../components/Layout";
 import Highlight from "../components/Highlight";
 
+const projects = [
+  {
+    img: "../static/img/FC.png",
+    title: "Flyover Country App",
+    sub: "Bringing the world outside your airplane window seat to life",
+    link: "https://flyovercountry.io",
+    duties: ["concept", "design", "development", "funding"],
+    color: "#005ead",
+    side: "right"
+  },
+  {
+    img: "../static/img/FC.png",
+    title: "MNsight App",
+    sub: "Visualizing Minnesota’s landscapes and geologic past",
+    link: "https://shane98c.github.io/MNsight/",
+    duties: ["concept", "design", "development"],
+    color: "#7A0019",
+    side: "left"
+  }
+];
+
+const buildHighlights = projects =>
+  projects.map(project => <Highlight {...project} />);
+
 export default () => (
   <div>
     <Layout>
@@ -12,26 +36,8 @@ export default () => (
         </div>
         <img src="../static/img/banner.jpeg" />
       </div>
-
       <div className="divide">selected work</div>
-      <Highlight
-        img="../static/img/FC.png"
-        title="Flyover Country App"
-        sub="Bringing the world outside your airplane window seat to life"
-        link="https://flyovercountry.io"
-        duties={["concept", "design", "development", "funding"]}
-        color="#005ead"
-        side="right"
-      />
-      <Highlight
-        img="../static/img/FC.png"
-        title="MNsight App"
-        sub="Visualizing Minnesota’s landscapes and geologic past"
-        link="https://shane98c.github.io/MNsight/"
-        duties={["concept", "design", "development"]}
-        color="#7A0019"
-        side="left"
-      />
+      {buildHighlights(projects)}
     </Layout>
     <style jsx>{`
       .hero {

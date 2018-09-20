@@ -17,32 +17,48 @@ const Wrapper = styled.div`
     font-weight: bold;
     color: ${({ color }) => color || "white"};
   }
-  nth-child(odd) {
-    img {
-      grid-column-end: 3;
-    }
-    .title {
-      text-align: left;
-      grid-column-start: 1;
-    }
-    .sub {
-      text-align: left;
-      margin-right: 0;
-      grid-column-start: 1;
-    }
-  }
-  nth-child(even) {
+  :nth-child(even) {
     img {
       grid-column-end: 1;
+      grid-row-start: 1;
+      grid-row-end: 3
     }
     .title {
+      text-align: right;
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+    .sub {
+      text-align: right;
+      margin-right: 0;
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
+    .links {
+      text-align: right;
+    }
+  }
+  :nth-child(odd) {
+    img {
+      grid-column-start: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+    .titles {
       text-align: left;
       grid-column-start: 1;
+      grid-row-start: 1;
+    }
+    .title {
+      grid-row-start: 1;
+      grid-column-start 1;
     }
     .sub {
       text-align: left;
-      margin-right: 0;
       grid-column-start: 1;
+      /* grid-row-start: 2; */
+    }
+    .links {
     }
   }
 `;
@@ -55,6 +71,7 @@ const Highlight = ({ title, sub, img, duties, ...rest }) => (
         <div className="title">{title}</div>
         <div className="sub">{sub}</div>
       </div>
+      <div className="links">store links here</div>
     </div>
     <Duties duties={duties} />
   </Wrapper>

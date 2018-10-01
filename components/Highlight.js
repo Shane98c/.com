@@ -7,32 +7,34 @@ const Wrapper = styled.div`
     display: grid;
   }
   .titles {
-    display: grid;
   }
   img {
     width: 100%;
+    min-width: 50%;
   }
   .title {
     font-size: 180%;
     font-weight: bold;
     color: ${({ color }) => color || "white"};
   }
+  .sub {
+    padding-top: 3px;
+    width: 75%;
+  }
   :nth-child(even) {
     img {
       grid-column-end: 1;
       grid-row-start: 1;
-      grid-row-end: 3
+      grid-row-end: 3;
     }
     .title {
       text-align: right;
-      grid-column-start: 1;
-      grid-row-start: 1;
     }
     .sub {
       text-align: right;
+      float: right;
       margin-right: 0;
-      grid-column-start: 1;
-      grid-row-start: 2;
+      padding-left: 5px;
     }
     .links {
       text-align: right;
@@ -46,32 +48,29 @@ const Wrapper = styled.div`
     }
     .titles {
       text-align: left;
-      grid-column-start: 1;
-      grid-row-start: 1;
     }
     .title {
-      grid-row-start: 1;
-      grid-column-start 1;
     }
     .sub {
       text-align: left;
-      grid-column-start: 1;
-      /* grid-row-start: 2; */
+      padding-right: 5px;
     }
     .links {
     }
   }
 `;
 
-const Highlight = ({ title, sub, img, duties, ...rest }) => (
+const Highlight = ({ title, sub, img, duties, link, ...rest }) => (
   <Wrapper {...rest}>
     <div className="highlight">
       <img src={img} />
       <div className="titles">
-        <div className="title">{title}</div>
+        <a href={link} target="_blank">
+          <div className="title">{title}</div>
+        </a>
         <div className="sub">{sub}</div>
       </div>
-      <div className="links">store links here</div>
+      <div className="links" />
     </div>
     <Duties duties={duties} />
   </Wrapper>

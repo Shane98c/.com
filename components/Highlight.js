@@ -6,11 +6,10 @@ const Wrapper = styled.div`
     padding: 20px 20px 5px 20px;
     display: grid;
   }
-  .titles {
+  .titles a {
   }
-  img {
-    width: 100%;
-    min-width: 50%;
+  .heroImg img {
+    width: 400px;
   }
   .title {
     font-size: 180%;
@@ -18,12 +17,15 @@ const Wrapper = styled.div`
     color: ${({ color }) => color || "white"};
   }
   .sub {
-    padding-top: 3px;
+    padding: 4px 5px 5px 0px;
     width: 75%;
   }
+  .links img {
+    width: 150px;
+  }
   :nth-child(even) {
-    img {
-      grid-column-end: 1;
+    .heroImg {
+      grid-column-start: 1;
       grid-row-start: 1;
       grid-row-end: 3;
     }
@@ -34,14 +36,14 @@ const Wrapper = styled.div`
       text-align: right;
       float: right;
       margin-right: 0;
-      padding-left: 5px;
     }
     .links {
       text-align: right;
+      grid-column-start: 2;
     }
   }
   :nth-child(odd) {
-    img {
+    .heroImg {
       grid-column-start: 2;
       grid-row-start: 1;
       grid-row-end: 3;
@@ -53,24 +55,49 @@ const Wrapper = styled.div`
     }
     .sub {
       text-align: left;
-      padding-right: 5px;
     }
     .links {
+      grid-column-start: 1;
     }
   }
 `;
 
-const Highlight = ({ title, sub, img, duties, link, ...rest }) => (
+const formatLinks = storeLinks => {
+  let links = [];
+  if (storeLinks.ios) {
+    links.push(
+      <div>
+        <a href={storeLinks.ios} target="_blank">
+          <img src="../static/img/appstr.svg" />
+        </a>
+      </div>
+    );
+  }
+  if (storeLinks.android) {
+    links.push(
+      <div>
+        <a href={storeLinks.android} target="_blank">
+          <img src="../static/img/playstr.svg" />
+        </a>
+      </div>
+    );
+  }
+  return links;
+};
+
+const Highlight = ({ title, sub, img, duties, link, storeLinks, ...rest }) => (
   <Wrapper {...rest}>
     <div className="highlight">
-      <img src={img} />
+      <div className="heroImg">
+        <img src={img} />
+      </div>
       <div className="titles">
         <a href={link} target="_blank">
           <div className="title">{title}</div>
         </a>
         <div className="sub">{sub}</div>
       </div>
-      <div className="links" />
+      <div className="links">{formatLinks(storeLinks)}</div>
     </div>
     <Duties duties={duties} />
   </Wrapper>

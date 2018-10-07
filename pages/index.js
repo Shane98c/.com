@@ -8,15 +8,24 @@ const projects = [
     title: "Flyover Country App",
     sub: "Bringing the world outside your airplane window seat to life",
     link: "https://flyovercountry.io",
+    storeLinks: {
+      android:
+        "https://play.google.com/store/apps/details?id=com.ionicframework.app303739",
+      ios: "https://itunes.apple.com/us/app/flyover-country/id1059886913"
+    },
     duties: ["concept", "design", "development", "funding"],
     color: "#005ead",
     side: "right"
   },
   {
-    img: "../static/img/FC.png",
+    img: "../static/img/MNsight.png",
     title: "MNsight App",
     sub: "Visualizing Minnesota’s landscapes and geologic past",
     link: "https://shane98c.github.io/MNsight/",
+    storeLinks: {
+      android: "https://play.google.com/store/apps/details?id=com.MNsight.geo",
+      ios: "https://itunes.apple.com/us/app/mnsight/id1304610283"
+    },
     duties: ["concept", "design", "development"],
     color: "#7A0019",
     side: "left"

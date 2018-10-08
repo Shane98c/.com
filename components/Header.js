@@ -13,15 +13,15 @@ const Header = () => (
       <Link href="/">
         <a style={linkStyle}>Home</a>
       </Link>
-      <Link href="/work">
-        <a style={linkStyle}>Work</a>
+      <Link href="/writing">
+        <a style={linkStyle}>Writing</a>
       </Link>
-      <Link href="/photos">
+      {/* <Link href="/photos">
         <a style={linkStyle}>Photography</a>
       </Link>
       <Link href="/education">
         <a style={linkStyle}>Education</a>
-      </Link>
+      </Link> */}
     </div>
 
     <style jsx>{`

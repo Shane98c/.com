@@ -6,7 +6,8 @@ const projects = [
   {
     img: "../static/img/FC.png",
     title: "Flyover Country App",
-    sub: "Bringing the world outside your airplane window seat to life",
+    sub: "Bringing the world outside your airplane window seat to life.",
+    linkName: "flyovercountry.io",
     link: "https://flyovercountry.io",
     storeLinks: {
       android:
@@ -20,7 +21,8 @@ const projects = [
   {
     img: "../static/img/MNsight.png",
     title: "MNsight App",
-    sub: "Visualizing Minnesota’s landscapes and geologic past",
+    sub: "Visualizing Minnesota’s landscapes and geologic past.",
+    linkName: "shane98c.github.io/MNsight",
     link: "https://shane98c.github.io/MNsight/",
     storeLinks: {
       android: "https://play.google.com/store/apps/details?id=com.MNsight.geo",

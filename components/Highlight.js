@@ -4,12 +4,24 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   .highlight {
     padding: 20px 20px 5px 20px;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
   .titles a {
+    text-decoration: none;
   }
   .heroImg img {
-    width: 400px;
+    min-width: 150px;
+    max-width: 400px;
+  }
+  .titles {
+    display: inline;
   }
   .title {
     font-size: 180%;
@@ -25,39 +37,34 @@ const Wrapper = styled.div`
   }
   :nth-child(even) {
     .heroImg {
-      grid-column-start: 1;
-      grid-row-start: 1;
-      grid-row-end: 3;
+      float: left;
     }
-    .title {
+    .text {
       text-align: right;
+      float: right;
     }
     .sub {
       text-align: right;
       float: right;
-      margin-right: 0;
     }
     .links {
       text-align: right;
-      grid-column-start: 2;
     }
   }
   :nth-child(odd) {
+    .highlight {
+      flex-direction: row-reverse;
+    }
     .heroImg {
-      grid-column-start: 2;
-      grid-row-start: 1;
-      grid-row-end: 3;
+      float: right;
     }
-    .titles {
-      text-align: left;
-    }
-    .title {
+    .text {
+      float: left;
     }
     .sub {
       text-align: left;
     }
     .links {
-      grid-column-start: 1;
     }
   }
 `;
@@ -88,16 +95,18 @@ const formatLinks = storeLinks => {
 const Highlight = ({ title, sub, img, duties, link, storeLinks, ...rest }) => (
   <Wrapper {...rest}>
     <div className="highlight">
-      <div className="heroImg">
+      <span className="heroImg">
         <img src={img} />
+      </span>
+      <div className="text">
+        <div className="titles">
+          <a href={link} target="_blank">
+            <div className="title">{title}</div>
+          </a>
+          <div className="sub">{sub}</div>
+        </div>
+        <div className="links">{formatLinks(storeLinks)}</div>
       </div>
-      <div className="titles">
-        <a href={link} target="_blank">
-          <div className="title">{title}</div>
-        </a>
-        <div className="sub">{sub}</div>
-      </div>
-      <div className="links">{formatLinks(storeLinks)}</div>
     </div>
     <Duties duties={duties} />
   </Wrapper>

@@ -2,8 +2,8 @@ import Header from "./Header";
 
 const layoutStyle = {
   padding: 20,
-  fontFamily: "Helvetica",
-  fontWeight: "100"
+  fontFamily: "Helvetica"
+  // fontWeight: "100"
 };
 
 const Layout = props => (

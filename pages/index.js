@@ -63,7 +63,7 @@ export default () => (
         padding-top: 20px;
       }
       .subHero {
-        font-weight: 100;
+        font-weight: 300;
         padding-top: 10px;
       }
       .divide {

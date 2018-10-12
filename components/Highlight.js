@@ -11,14 +11,17 @@ const Wrapper = styled.div`
   .text {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    width: 50%;
+    min-width: 300px;
   }
+
   .titles a {
     text-decoration: none;
   }
   .heroImg {
     max-width: 50%;
-    min-width: 200px;
+    min-width: 300px;
   }
   .heroImg img {
     max-width: 100%;
@@ -30,7 +33,7 @@ const Wrapper = styled.div`
   }
   .sub {
     padding: 4px 5px 5px 0px;
-    width: 75%;
+    /* width: 75%; */
   }
   .links img {
     width: 150px;

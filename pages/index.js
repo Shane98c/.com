@@ -15,8 +15,7 @@ const projects = [
       ios: "https://itunes.apple.com/us/app/flyover-country/id1059886913"
     },
     duties: ["concept", "design", "development", "funding"],
-    color: "#005ead",
-    side: "right"
+    color: "#005ead"
   },
   {
     img: "../static/img/MNsight.png",
@@ -29,8 +28,16 @@ const projects = [
       ios: "https://itunes.apple.com/us/app/mnsight/id1304610283"
     },
     duties: ["concept", "design", "development"],
-    color: "#7A0019",
-    side: "left"
+    color: "#7A0019"
+  },
+  {
+    img: "../static/img/mgv.png",
+    title: "MultiGeoVis",
+    sub: "Visualizing multivariate spatiotemporal data on mobile devices",
+    linkName: "github.com/Shane98c/multigeovis",
+    link: "https://github.com/Shane98c/multigeovis",
+    duties: ["concept", "design", "development"],
+    color: "#008946"
   }
 ];
 

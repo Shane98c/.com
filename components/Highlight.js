@@ -6,7 +6,7 @@ const Wrapper = styled.div`
     padding: 20px 20px 5px 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .text {
     display: flex;
@@ -16,17 +16,17 @@ const Wrapper = styled.div`
   .titles a {
     text-decoration: none;
   }
-  .heroImg img {
-    min-width: 150px;
-    max-width: 400px;
+  .heroImg {
+    max-width: 50%;
+    min-width: 200px;
   }
-  .titles {
-    display: inline;
+  .heroImg img {
+    max-width: 100%;
   }
   .title {
     font-size: 180%;
     font-weight: bold;
-    color: ${({ color }) => color || "white"};
+    color: ${({ color }) => color || "black"};
   }
   .sub {
     padding: 4px 5px 5px 0px;
@@ -35,43 +35,29 @@ const Wrapper = styled.div`
   .links img {
     width: 150px;
   }
+  .siteLink a {
+    text-decoration: underline;
+    color: black;
+  }
+
   :nth-child(even) {
-    .heroImg {
-      float: left;
-    }
     .text {
       text-align: right;
-      float: right;
     }
     .sub {
-      text-align: right;
-      float: right;
-    }
-    .links {
-      text-align: right;
+      margin-left: auto;
     }
   }
   :nth-child(odd) {
     .highlight {
       flex-direction: row-reverse;
     }
-    .heroImg {
-      float: right;
-    }
-    .text {
-      float: left;
-    }
-    .sub {
-      text-align: left;
-    }
-    .links {
-    }
   }
 `;
 
 const formatLinks = storeLinks => {
   let links = [];
-  if (storeLinks.ios) {
+  if (storeLinks && storeLinks.ios) {
     links.push(
       <div>
         <a href={storeLinks.ios} target="_blank">
@@ -80,7 +66,7 @@ const formatLinks = storeLinks => {
       </div>
     );
   }
-  if (storeLinks.android) {
+  if (storeLinks && storeLinks.android) {
     links.push(
       <div>
         <a href={storeLinks.android} target="_blank">
@@ -92,7 +78,16 @@ const formatLinks = storeLinks => {
   return links;
 };
 
-const Highlight = ({ title, sub, img, duties, link, storeLinks, ...rest }) => (
+const Highlight = ({
+  title,
+  sub,
+  img,
+  duties,
+  link,
+  storeLinks,
+  linkName,
+  ...rest
+}) => (
   <Wrapper {...rest}>
     <div className="highlight">
       <span className="heroImg">
@@ -103,8 +98,13 @@ const Highlight = ({ title, sub, img, duties, link, storeLinks, ...rest }) => (
           <a href={link} target="_blank">
             <div className="title">{title}</div>
           </a>
-          <div className="sub">{sub}</div>
+          <div className="siteLink">
+            <a href={link} target="_blank">
+              {linkName}
+            </a>
+          </div>
         </div>
+        <span className="sub">{sub}</span>
         <div className="links">{formatLinks(storeLinks)}</div>
       </div>
     </div>

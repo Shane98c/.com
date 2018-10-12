@@ -15,6 +15,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
+          <title>Shane Loeffler</title>
           {this.props.styleTags}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>

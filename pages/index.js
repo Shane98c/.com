@@ -33,7 +33,7 @@ const projects = [
   {
     img: "../static/img/mgv.png",
     title: "MultiGeoVis",
-    sub: "Visualizing multivariate spatiotemporal data on mobile devices",
+    sub: "Visualizing multivariate spatiotemporal data on mobile devices.",
     linkName: "github.com/Shane98c/multigeovis",
     link: "https://github.com/Shane98c/multigeovis",
     duties: ["concept", "design", "development"],

@@ -1,10 +1,4 @@
-const linkStyle = {
-  marginRight: 15,
-  textDecoration: "none",
-  color: "black"
-};
-
-const Header = () => (
+const Footer = () => (
   <div>
     <div className="footerTitle">Get in touch</div>
     <div className="footerItems">
@@ -20,7 +14,7 @@ const Header = () => (
       <a href="https://www.linkedin.com/in/shane-loeffler/" target="_blank">
         LinkedIn
       </a>
-      <a href="https://instagram.com/shane98c/" target="_blank">
+      <a href="https://www.instagram.com/shane98c/" target="_blank">
         Instagram
       </a>
     </div>
@@ -43,9 +37,11 @@ const Header = () => (
       }
       .footerItems a {
         color: black;
+        width: 50px;
+        text-align: center;
       }
       .copy {
-        padding-top: 15px;
+        padding-top: 5px;
         font-size: 13px;
       }
       .num {
@@ -56,4 +52,4 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+export default Footer;

@@ -9,9 +9,10 @@ const Duties = props => (
         justify-content: space-around;
         flex-flow: row wrap;
         margin-top: 10px;
+        margin-bottom: 15px;
         border-bottom: 1px solid;
         padding: 0 20px 5px 20px;
-        font-size: 0.9em;
+        font-size: 1em;
       }
     `}</style>
   </div>

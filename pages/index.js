@@ -47,33 +47,11 @@ const buildHighlights = projects =>
 export default () => (
   <div>
     <Layout>
-      <div className="intro">
-        <div className="hero">Shane Loeffler</div>
-        <div className="subHero">
-          Earth scientist, software developer, and science communicator
-        </div>
-        <img src="../static/img/banner.jpeg" />
-      </div>
-      <div className="divide">selected work</div>
+      <img src="../static/img/banner.jpeg" />
+
       {buildHighlights(projects)}
     </Layout>
     <style jsx>{`
-      .hero {
-        font-size: 2em;
-        padding-top: 20px;
-      }
-      .subHero {
-        font-weight: 300;
-        padding-top: 10px;
-      }
-      .divide {
-        border-bottom: 1px solid;
-        text-align: center;
-        padding: 5px;
-      }
-      .intro {
-        padding: 10px;
-      }
       img {
         width: 100%;
         margin: 40px 0 10px 0;

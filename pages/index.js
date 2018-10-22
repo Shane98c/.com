@@ -48,6 +48,7 @@ export default () => (
   <div>
     <Layout>
       <img src="../static/img/banner.jpeg" />
+      <div className="divide">selected work</div>
 
       {buildHighlights(projects)}
     </Layout>
@@ -55,6 +56,11 @@ export default () => (
       img {
         width: 100%;
         margin: 40px 0 10px 0;
+      }
+      .divide {
+        border-bottom: 1px solid;
+        text-align: center;
+        padding: 5px;
       }
     `}</style>
   </div>

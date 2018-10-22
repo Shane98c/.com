@@ -53,7 +53,7 @@ const Post = props => (
           </a>
         </div>
         <div className="src">
-          <a href="{props.srcLink">{props.src}</a> - {props.date}
+          <a href={props.srcLink}>{props.src}</a> - {props.date}
         </div>
         <div className="snip">{props.snippet} . . .</div>
       </div>

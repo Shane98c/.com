@@ -21,6 +21,7 @@ const Wrapper = styled.div`
   }
   .title a {
     text-decoration: none;
+    color: black;
   }
   .heroImg {
     max-width: 50%;
@@ -43,7 +44,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Post = props => (
+const Post = (props) => (
   <Wrapper>
     <div className="post">
       <div className="text">

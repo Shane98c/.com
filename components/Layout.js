@@ -5,10 +5,10 @@ const layoutStyle = {
   padding: 20,
   fontFamily: "Helvetica",
   maxWidth: 1000,
-  margin: "0 auto"
+  margin: "0 auto",
 };
 
-const Layout = props => (
+const Layout = (props) => (
   <div style={layoutStyle}>
     <Header />
     {props.children}

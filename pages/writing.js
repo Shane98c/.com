@@ -11,7 +11,7 @@ const posts = [
     date: "January 26, 2016",
     link: "http://youcanscience.com/explore-earths-rocks-with-macrostrat-org/",
     src: "YouCanScience.com",
-    srcLink: "http://youcanscience.com/"
+    srcLink: "http://youcanscience.com/",
   },
   {
     title: "Explore the Universe with SpaceEngine",
@@ -22,7 +22,7 @@ const posts = [
     date: "October 21, 2015",
     link: "http://youcanscience.com/explore-the-universe-with-spaceengine/",
     src: "YouCanScience.com",
-    srcLink: "http://youcanscience.com/"
+    srcLink: "http://youcanscience.com/",
   },
   {
     title: "Explore Earth’s past with these tools",
@@ -33,8 +33,9 @@ const posts = [
     date: "April 16, 2016",
     link: "http://youcanscience.com/explore-earths-past-free-tools/",
     src: "YouCanScience.com",
-    srcLink: "http://youcanscience.com/"
-  }
+    srcLink: "http://youcanscience.com/",
+  },
 ];
-const buildPosts = posts => posts.map(post => <Post {...post} />);
+const buildPosts = (posts) =>
+  posts.map((post, index) => <Post key={index} {...post} />);
 export default () => <Layout>{buildPosts(posts)}</Layout>;

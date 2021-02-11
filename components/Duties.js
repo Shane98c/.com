@@ -1,6 +1,7 @@
-const getDuties = duties => duties.map(duty => <span>{duty}</span>);
+const getDuties = (duties) =>
+  duties.map((duty, index) => <span key={index}>{duty}</span>);
 
-const Duties = props => (
+const Duties = (props) => (
   <div>
     <div className="duty">{getDuties(props.duties)}</div>
     <style jsx>{`

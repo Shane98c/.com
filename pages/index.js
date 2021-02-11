@@ -52,14 +52,17 @@ const projects = [
 ];
 
 const buildHighlights = (projects) =>
-  projects.map((project) => <Highlight {...project} />);
+  projects.map((project, index) => <Highlight {...project} key={index} />);
+
+const headerImg = {
+  borderRadius: "15px",
+};
 
 export default () => (
   <div>
     <Layout>
-      <img src="../static/img/banner.jpeg" />
+      <img src="../static/img/banner.jpeg" style={headerImg} />
       <div className="divide">selected work</div>
-
       {buildHighlights(projects)}
     </Layout>
     <style jsx>{`

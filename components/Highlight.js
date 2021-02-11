@@ -63,7 +63,7 @@ const formatLinks = (storeLinks) => {
   let links = [];
   if (storeLinks && storeLinks.ios) {
     links.push(
-      <div>
+      <div key={storeLinks.ios}>
         <a href={storeLinks.ios} target="_blank">
           <img src="../static/img/appstr.svg" />
         </a>
@@ -72,7 +72,7 @@ const formatLinks = (storeLinks) => {
   }
   if (storeLinks && storeLinks.android) {
     links.push(
-      <div>
+      <div key={storeLinks.android}>
         <a href={storeLinks.android} target="_blank">
           <img src="../static/img/playstr.svg" />
         </a>

@@ -2,9 +2,6 @@ import * as React from "react";
 import Layout from "../components/Layout";
 import Highlight from "../components/Highlight";
 
-if (process.browser) {
-  document.body.classList.add("loaded");
-}
 const projects = [
   {
     img: "../static/img/maptheblacksnake.png",

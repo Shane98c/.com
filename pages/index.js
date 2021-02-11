@@ -7,7 +7,7 @@ const projects = [
     img: "../static/img/maptheblacksnake.png",
     title: "Mapping the Black Snake",
     sub:
-      "Interactive map outlining the Line 3 pipeline and the fight for our future.",
+      "Interactive map outlining the impacts of the Line 3 tar sands oil pipeline.",
     linkName: "maptheblacksnake.com",
     link: "https://maptheblacksnake.com/",
     duties: ["concept", "design", "development", "writing"],

@@ -17,12 +17,13 @@ const Wrapper = styled.div`
   .title {
     font-size: 180%;
     font-weight: bold;
-    color: ${({ color }) => color || "black"};
+    color: ${({ color }) => color || " #5dade2 "};
   }
   .title a {
     text-decoration: none;
-    color: black;
+    color: #5d6d7e;
   }
+
   .heroImg {
     max-width: 50%;
     min-width: 300px;
@@ -54,7 +55,10 @@ const Post = (props) => (
           </a>
         </div>
         <div className="src">
-          <a href={props.srcLink}>{props.src}</a> - {props.date}
+          <a target="_blank" href={props.srcLink}>
+            {props.src}
+          </a>{" "}
+          | {props.date} | {props.audience}
         </div>
         <div className="snip">{props.snippet} . . .</div>
       </div>

@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   }
   .title {
     font-size: 180%;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: ${({ color }) => color || " #5dade2 "};
   }
   .title a {

@@ -25,6 +25,7 @@ const Wrapper = styled.div`
   }
   .heroImg img {
     max-width: 100%;
+    border-radius: 15px;
   }
   .title {
     font-size: 180%;
@@ -58,7 +59,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const formatLinks = storeLinks => {
+const formatLinks = (storeLinks) => {
   let links = [];
   if (storeLinks && storeLinks.ios) {
     links.push(

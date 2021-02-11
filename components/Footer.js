@@ -18,8 +18,6 @@ const Footer = () => (
         Instagram
       </a>
     </div>
-    <div className="num">+1 218 220 8656</div>
-    <div className="copy">© Shane Loeffler 2018</div>
     <style jsx>{`
       .footerTitle {
         display: flex;
@@ -29,6 +27,7 @@ const Footer = () => (
       }
       .footerItems {
         padding-top: 10px;
+        padding-bottom: 10px;
         font-size: smaller;
         display: flex;
         flex-wrap: wrap;
@@ -39,14 +38,6 @@ const Footer = () => (
         color: black;
         width: 50px;
         text-align: center;
-      }
-      .copy {
-        padding-top: 5px;
-        font-size: 13px;
-      }
-      .num {
-        padding-top: 15px;
-        font-size: 13px;
       }
     `}</style>
   </div>

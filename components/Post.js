@@ -4,13 +4,13 @@ const Wrapper = styled.div`
     padding: 50px 20px 20px 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     border-bottom: 1px solid;
   }
   .text {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 50%;
     min-width: 300px;
   }

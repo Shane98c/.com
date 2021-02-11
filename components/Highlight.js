@@ -29,12 +29,10 @@ const Wrapper = styled.div`
   }
   .title {
     font-size: 180%;
-    font-weight: bold;
     color: ${({ color }) => color || "black"};
   }
   .sub {
-    padding: 4px 5px 5px 0px;
-    /* width: 75%; */
+    width: 75%;
   }
   .links img {
     width: 150px;

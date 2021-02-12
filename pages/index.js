@@ -68,7 +68,7 @@ export default () => (
       <meta property="og:title" content="Shane Loeffler" />
       <meta
         property="og:description"
-        content="Earth scientist, web developer, and cartographer"
+        content="Earth scientist, software developer, and cartographer"
       />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://shaneloeffler.com/" />

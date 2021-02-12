@@ -28,7 +28,7 @@ const Header = () => (
       <div>
         <div className="hero">Shane Loeffler</div>
         <div className="subHero">
-          Earth scientist, web developer, cartographer
+          Earth scientist, software developer, cartographer
         </div>
       </div>
       <div className="heroImg">

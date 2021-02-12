@@ -1,5 +1,6 @@
 import Post from "../components/Post";
 import Layout from "../components/Layout";
+import Head from "next/head";
 
 const posts = [
   {
@@ -49,4 +50,13 @@ const posts = [
 ];
 const buildPosts = (posts) =>
   posts.map((post, index) => <Post key={index} {...post} />);
-export default () => <Layout>{buildPosts(posts)}</Layout>;
+export default () => (
+  <Layout>
+    <Head>
+      <title>Shane / writing</title>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
+    {buildPosts(posts)}
+  </Layout>
+);

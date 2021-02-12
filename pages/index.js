@@ -1,6 +1,7 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 import Highlight from "../components/Highlight";
+import Head from "next/head";
 
 const projects = [
   {
@@ -60,6 +61,22 @@ const headerImg = {
 
 export default () => (
   <div>
+    <Head>
+      <title>Shane Loeffler</title>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta property="og:title" content="Shane Loeffler" />
+      <meta
+        property="og:description"
+        content="Earth scientist, web developer, and cartographer"
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://shaneloeffler.com/" />
+      <meta
+        property="og:image"
+        content="https://avatars.githubusercontent.com/u/14908734?s=460&u=6f2721927aed492c4cc06c9dbbac17e7097b42d6&v=4"
+      />
+    </Head>
     <Layout>
       <img src="../static/img/banner.jpeg" style={headerImg} />
       <div className="divide">selected work</div>

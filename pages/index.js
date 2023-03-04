@@ -13,7 +13,7 @@ const projects = [
     duties: ["cartography", "development", "writing"],
   },
   {
-    img: "../static/img/fridge.png",
+    img: "../static/img/fridge.jpg",
     title: "Polar Geospatial Center Fridge App",
     sub: "Search petabytes of commercial satellite imagery.",
     linkName: "PGC Fridge App (requires login)",

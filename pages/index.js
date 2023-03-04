@@ -21,7 +21,7 @@ const projects = [
     duties: ["cartography", "full-stack development", "design"],
   },
   {
-    img: "../static/img/trees.png",
+    img: "../static/img/trees.jpg",
     title: "Visualizing billions of trees",
     sub: "Worked with NASA scientists to visualize billions of tree crown polygons across the Sahara. Processed computer vision output data on HPC systems to transform it for performant visualization in the browser (see viewer). Cover story of Nature's March 2023 edition.",
     linkName: "Find the viewer on Nature.com",

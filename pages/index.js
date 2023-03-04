@@ -53,7 +53,7 @@ const projects = [
   {
     img: "../static/img/eclipse.jpeg",
     title: "2021 Antarctic Eclipse",
-    sub: "Designed a Blenerd-based visualization of the 2021 Antarctic Eclipse.",
+    sub: "Designed a Blender-based visualization of the 2021 Antarctic Eclipse.",
     linkName: "See the map",
     link: "https://twitter.com/polargeospatial/status/1467191683083341839/photo/1",
     duties: ["cartography"],

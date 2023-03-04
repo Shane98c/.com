@@ -7,6 +7,8 @@ const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    /* border-bottom: 1px solid grey; */
+    padding: 50px 0;
   }
   .text {
     display: flex;
@@ -14,10 +16,12 @@ const Wrapper = styled.div`
     justify-content: space-evenly;
     width: 50%;
     min-width: 300px;
+    opacity: 0.9;
   }
 
   .titles a {
     text-decoration: none;
+    opacity: 0.9;
   }
   .heroImg {
     max-width: 50%;
@@ -40,6 +44,7 @@ const Wrapper = styled.div`
   .siteLink a {
     text-decoration: underline;
     color: black;
+    margin: 10px 0;
   }
 
   :nth-child(even) {

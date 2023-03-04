@@ -2,7 +2,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --openssl-legacy-provider",
     "export": "next export"
   },
   "dependencies": {

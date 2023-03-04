@@ -14,6 +14,8 @@ const Duties = (props) => (
         border-bottom: 1px solid;
         padding: 0 20px 5px 20px;
         font-size: 1em;
+        opacity: 0.6;
+        padding-bottom: 20px;
       }
     `}</style>
   </div>

@@ -10,18 +10,22 @@ const Header = () => (
   <div>
     <div className="headerItems">
       <Link href="/">
-        <a style={linkStyle}>Home</a>
+        <a className="headerLinks" style={linkStyle}>
+          Home
+        </a>
       </Link>
       <Link href="/writing">
-        <a style={linkStyle}>Writing</a>
+        <a className="headerLinks" style={linkStyle}>
+          Writing
+        </a>
       </Link>
       <Link href="https://www.instagram.com/shane98c/">
-        <a style={linkStyle} target="_blank">
+        <a className="headerLinks" style={linkStyle} target="_blank">
           Photography
         </a>
       </Link>
       {/* <Link href="/education">
-        <a style={linkStyle}>Education</a>
+        <a className="headerLinks" style={linkStyle}>Education</a>
       </Link> */}
     </div>
     <div className="intro">
@@ -41,14 +45,23 @@ const Header = () => (
         font-size: smaller;
         text-align: right;
         padding-bottom: 30px;
+        /* opacity: 0.6; */
+      }
+      .headerLinks {
+        opacity: 0.7;
+      }
+      .headerLinks:hover {
+        opacity: 1;
       }
       .hero {
         font-size: 2em;
         padding-top: 20px;
+        opacity: 0.8;
       }
       .subHero {
         font-weight: 300;
         padding-top: 10px;
+        opacity: 0.8;
       }
       .heroImg img {
         border-radius: 500px;

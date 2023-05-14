@@ -14,10 +14,10 @@ const projects = [
   },
   {
     img: "../static/img/fridge.jpg",
-    title: "Polar Geospatial Center Fridge App",
-    sub: "Search petabytes of commercial satellite imagery.",
-    linkName: "PGC Fridge App (requires login)",
-    link: "https://www.pgc.umn.edu/",
+    title: "Polar Geospatial Center's Fridge App",
+    sub: "Search petabytes of commercial satellite imagery and publicly available digital elevation models.",
+    linkName: "Search for data",
+    link: "https://fridge.pgc.umn.edu/",
     duties: ["cartography", "full-stack development", "design"],
   },
   {

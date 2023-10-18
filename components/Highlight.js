@@ -9,6 +9,7 @@ const Wrapper = styled.div`
     justify-content: space-evenly;
     /* border-bottom: 1px solid grey; */
     padding: 50px 0;
+    flex-direction: row-reverse;
   }
   .text {
     display: flex;
@@ -17,6 +18,8 @@ const Wrapper = styled.div`
     width: 50%;
     min-width: 300px;
     opacity: 0.9;
+    font-weight: 300;
+    opacity: 0.8;
   }
 
   .titles a {
@@ -40,6 +43,7 @@ const Wrapper = styled.div`
   }
   .links img {
     width: 150px;
+    opacity: 1;
   }
   .siteLink a {
     text-decoration: underline;
@@ -47,19 +51,25 @@ const Wrapper = styled.div`
     margin: 10px 0;
   }
 
-  :nth-child(even) {
-    .text {
-      text-align: right;
-    }
-    .sub {
-      margin-left: auto;
-    }
-  }
-  :nth-child(odd) {
-    .highlight {
-      flex-direction: row-reverse;
-    }
-  }
+  // :nth-child(even) {
+  //   .text {
+  //     text-align: justify;
+  //   }
+  //   .titles {
+  //     text-align: right;
+  //   }
+  //   .img {
+  //     margin-left: auto;
+  //   }
+  //   .sub {
+  //     margin-left: auto;
+  //   }
+  // }
+  // :nth-child(odd) {
+  //   .highlight {
+  //     flex-direction: row-reverse;
+  //   }
+  // }
 `;
 
 const formatLinks = (storeLinks) => {

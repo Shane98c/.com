@@ -1,46 +1,22 @@
+const links = [
+  ["Email", "mailto:shane98c@gmail.com"],
+  ["GitHub", "https://github.com/shane98c"],
+  ["LinkedIn", "https://www.linkedin.com/in/shane-loeffler/"],
+  ["Instagram", "https://www.instagram.com/shane98c/"],
+  ["Bluesky", "https://bsky.app/profile/shaneloeffler.com"],
+  ["Twitter", "https://twitter.com/shane98c"],
+];
+
 const Footer = () => (
-  <div>
-    <div className="footerTitle">Get in touch</div>
-    <div className="footerItems">
-      <a href="mailto:shane98c@gmail.com" target="_blank">
-        Email
-      </a>
-      <a href="https://twitter.com/shane98c" target="_blank">
-        Twitter
-      </a>
-      <a href="https://github.com/shane98c" target="_blank">
-        Github
-      </a>
-      <a href="https://www.linkedin.com/in/shane-loeffler/" target="_blank">
-        LinkedIn
-      </a>
-      <a href="https://www.instagram.com/shane98c/" target="_blank">
-        Instagram
-      </a>
-    </div>
-    <style jsx>{`
-      .footerTitle {
-        display: flex;
-        justify-content: center;
-        padding-top: 25px;
-        font-weight: 600;
-      }
-      .footerItems {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: smaller;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        width: 100%;
-      }
-      .footerItems a {
-        color: black;
-        width: 50px;
-        text-align: center;
-      }
-    `}</style>
-  </div>
+  <footer className="footer">
+    <nav>
+      {links.map(([name, href]) => (
+        <a key={name} href={href} target="_blank" rel="noreferrer">
+          {name}
+        </a>
+      ))}
+    </nav>
+  </footer>
 );
 
 export default Footer;

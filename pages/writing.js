@@ -1,62 +1,62 @@
-import Post from "../components/Post";
 import Layout from "../components/Layout";
-import Head from "next/head";
+import Post from "../components/Post";
 
 const posts = [
+  {
+    title: "Hybrid Icechunk stores for serverless web mapping",
+    audience: "Technical",
+    snippet:
+      "This past winter, we saw one of the worst snowpacks in recent memory for the Western U.S., and we wanted to be able to explore how this season compared to last. NOAA provides seasonal snowfall data as NetCDF, a format commonly used for scientific workflows and analysis. Web maps shine for exploring a dataset quickly, but NetCDF files have not traditionally been compatible with web mapping, and transforming them into a web map-compatible format is a lot of work.",
+    img: "/img/icechunk-post.webp",
+    width: 1200,
+    height: 630,
+    date: "August 10, 2026",
+    link: "https://cloudnativegeo.org/blog/2026/08/virtual-icechunk-multiscale/",
+    src: "Cloud-Native Geospatial Forum",
+    srcLink: "https://cloudnativegeo.org/blog/",
+  },
+  {
+    title: "Flexible Zarr visualization for web maps",
+    audience: "Technical",
+    snippet:
+      "We build and distribute many of our climate datasets in cloud-native formats like Zarr, which make scientific data easier to share and analyze. To visualize Zarr on the web, we previously built @carbonplan/maps. The library took advantage of the flexibility of the Zarr format, allowing us to create interactive web maps that combine variables, handle time and other non-spatial dimensions, and query numeric values on the fly.",
+    img: "/img/zarr-layer-post.webp",
+    width: 1200,
+    height: 630,
+    date: "April 2, 2026",
+    link: "https://carbonplan.org/blog/zarr-layer-maps",
+    src: "CarbonPlan",
+    srcLink: "https://carbonplan.org/blog",
+  },
   {
     title: "Mobile UX design: learning from the Flyover Country mobile app",
     audience: "Academic",
     snippet:
-      "Abstract: Technology has transformed maps into interactive tools for exploring and understanding the world. In this article, we present the user experience (UX) design process for Flyover Country (http://flyovercountry.io), a mobile mapping application that visualizes information about the Earth’s geology and history, allowing users to save and then access the information offline while flying, driving, or hiking. Specifically, the paper presents a UX design study that tracks the conceptualization, implementation, and revision of Flyover Country, and employs scenario-based design to walk through a pair of use case scenarios that informed our UX design: science outreach to the general public and field trip guides for geoscience education. In the paper, we note UX design insights that are potentially transferable to other mobile mapping contexts, organizing insights by mobile representation design (scale, projection, symbolization, and typography) versus mobile interaction design (map entry point, bottom navigation, floating action button, and pull-up information panel).",
-    img: "./static/img/jom.jpg",
+      "Technology has transformed maps into interactive tools for exploring and understanding the world. In this article, we present the user experience (UX) design process for Flyover Country, a mobile mapping application that visualizes information about the Earth's geology and history, allowing users to save and then access the information offline while flying, driving, or hiking. The paper presents a UX design study that tracks the conceptualization, implementation, and revision of Flyover Country, and employs scenario-based design to walk through a pair of use case scenarios that informed our UX design: science outreach to the general public and field trip guides for geoscience education.",
+    img: "/img/jom.webp",
+    width: 500,
+    height: 487,
     date: "2021",
     link: "https://www.tandfonline.com/doi/full/10.1080/17445647.2020.1867247",
     src: "Journal of Maps",
     srcLink: "https://www.tandfonline.com/toc/tjom20/current",
   },
-  {
-    title: "Explore Earth’s rocks with Macrostrat.org",
-    audience: "General Public",
-    snippet:
-      "Geologists, for better or worse, have been wandering the globe for a couple hundred years now, meticulously mapping every outcrop, moraine, fossil bed, and fold they can find. At this point in history we’ve got a pretty good idea of what rocks are where, more or less how they formed, and when. Earth’s history is being teased out thanks to huge (and recent) advances in our understanding of our planet’s dynamics such as plate tectonics and advances in radiometric dating. It’s pretty likely that someone has put a lot of thought into what the heck is going on with the rocks in your backyard; but how can you join in on that contemplation?",
-    img: "./static/img/macro.png",
-    date: "January 26, 2016",
-    link: "http://youcanscience.com/explore-earths-rocks-with-macrostrat-org/",
-    src: "YouCanScience.com",
-    srcLink: "http://youcanscience.com/",
-  },
-  {
-    title: "Explore the Universe with SpaceEngine",
-    audience: "General Public",
-    snippet:
-      "It’s one thing to know that there are 200 billion stars in the Milky Way Galaxy, that the Sun is a fairly average one, that many stars have planetary systems, and that there are hundreds of billions of other galaxies in our observable universe. It is another thing entirely to feel those numbers and facts. We can know them intellectually, rattle them off, and continue on with our day on planet Earth as if nothing profound was said, somehow not dropping dead of astonishment. This is maybe because even just a single billion is an unimaginable number. Our brains stop short, dumbfounded by the the prospect that there could possibly be that much stuff; the astonishment you might expect a humble human to feel at the thought of that much vastness is lost when its brain gets hung up on something it isn’t equipped to deal with, namely enormous quantities and their infinite possibilities.",
-    img: "./static/img/se.jpg",
-    date: "October 21, 2015",
-    link: "http://youcanscience.com/explore-the-universe-with-spaceengine/",
-    src: "YouCanScience.com",
-    srcLink: "http://youcanscience.com/",
-  },
-  {
-    title: "Explore Earth’s past with these tools",
-    audience: "General Public",
-    snippet:
-      "Human’s have unearthed an astonishing number of fossils and other clues to what the Earth was like in the past.  So many, in fact, that they need tools to keep track of them. Databases, like the Paleobiology Database and the Neotoma Paleoecology Database (both based at the University of Wisconsin Madison), allow scientists – and you – to explore and analyze the history of life in ways that were unimaginable not long ago. By organizing the locations, types, ages, and relationships between these discoveries, we can begin to tease out new answers to big questions about the history of life and climate on Earth.",
-    img: "./static/img/pbdb.jpg",
-    date: "April 16, 2016",
-    link: "http://youcanscience.com/explore-earths-past-free-tools/",
-    src: "YouCanScience.com",
-    srcLink: "http://youcanscience.com/",
-  },
 ];
-const buildPosts = (posts) =>
-  posts.map((post, index) => <Post key={index} {...post} />);
-export default () => (
-  <Layout>
-    <Head>
-      <title>Shane / writing</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    {buildPosts(posts)}
-  </Layout>
-);
+
+export default function Writing() {
+  return (
+    <Layout
+      title="Shane Loeffler · Writing"
+      description="Articles and papers by Shane Loeffler"
+      path="/writing"
+    >
+      <section className="section">
+        <div className="work">
+          {posts.map((post) => (
+            <Post key={post.title} {...post} />
+          ))}
+        </div>
+      </section>
+    </Layout>
+  );
+}

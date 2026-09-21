@@ -1,14 +1,11 @@
-FROM mhart/alpine-node
+FROM node:22-alpine
 
-# Set the default working directory
 WORKDIR /usr/src
 
-# Install dependencies
-COPY package.json yarn.lock ./
-RUN yarn
+COPY package.json package-lock.json ./
+RUN npm ci
 
-# Copy the relevant files to the working directory
 COPY . .
 
-# Build and export the app
-RUN yarn build && yarn export -o /public
+# Static export lands in ./out; expose it at /public for the host
+RUN npm run build && mv out /public

@@ -1,72 +1,28 @@
-import styled from "styled-components";
-const Wrapper = styled.div`
-  .post {
-    padding: 50px 20px 20px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-bottom: 1px solid;
-  }
-  .text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    min-width: 300px;
-  }
-  .title {
-    font-size: 180%;
-    /* font-weight: bold; */
-    color: ${({ color }) => color || " #5dade2 "};
-  }
-  .title a {
-    text-decoration: none;
-    color: #5d6d7e;
-  }
-
-  .heroImg {
-    max-width: 50%;
-    min-width: 300px;
-    display: inline-flex;
-    align-items: center;
-  }
-  .heroImg img {
-    width: 100%;
-  }
-  .snip {
-    padding: 10px 20px 0px 5px;
-    font-size: 0.9rem;
-  }
-  .src {
-    font-size: 0.7rem;
-  }
-  .src a {
-    color: black;
-  }
-`;
-
-const Post = (props) => (
-  <Wrapper>
-    <div className="post">
-      <div className="text">
-        <div className="title">
-          <a href={props.link} target="_blank">
-            {props.title}
-          </a>
-        </div>
-        <div className="src">
-          <a target="_blank" href={props.srcLink}>
-            {props.src}
-          </a>{" "}
-          | {props.date} | {props.audience}
-        </div>
-        <div className="snip">{props.snippet} . . .</div>
+const Post = ({ title, snippet, img, width, height, date, link, src, srcLink, audience }) => (
+  <article className="project">
+    {img && (
+      <a href={link} target="_blank" rel="noreferrer">
+        <img src={img.replace("/img/", "/img/thumb/")} alt={title} width={width} height={height} loading="lazy" decoding="async" />
+      </a>
+    )}
+    <div className="project-text">
+      <h3>
+        <a href={link} target="_blank" rel="noreferrer">
+          {title}
+        </a>
+      </h3>
+      <div className="meta">
+        <a href={srcLink} target="_blank" rel="noreferrer">
+          {src}
+        </a>{" "}
+        · {date} · {audience}
       </div>
-
-      <div className="heroImg">
-        <img src={props.img} />
-      </div>
+      <p className="snippet">{snippet}</p>
+      <a className="cta" href={link} target="_blank" rel="noreferrer">
+        Read it at {src}
+      </a>
     </div>
-  </Wrapper>
+  </article>
 );
+
 export default Post;

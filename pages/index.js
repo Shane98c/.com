@@ -47,6 +47,18 @@ const featured = [
 
 const projects = [
   {
+    img: "/img/live-geoembeddings.webp",
+    width: 1200,
+    height: 772,
+    title: "Live Geoembeddings",
+    sub: "Click a few spots on a map and similar places light up, or define land cover classes and get a classification map. AlphaEarth and TESSERA satellite embeddings are read straight from cloud storage with zarr-layer and scored on the GPU, entirely in the browser.",
+    linkName: "Try the demo",
+    link: "https://shane98c.github.io/live-geoembeddings/",
+    links: [
+      { name: "GitHub", href: "https://github.com/Shane98c/live-geoembeddings" },
+    ],
+  },
+  {
     img: "/img/wiki-geoparquet.webp",
     width: 1200,
     height: 750,

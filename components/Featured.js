@@ -1,14 +1,17 @@
 
-const Featured = ({ title, sub, img, width, height, link, linkName, links = [] }) => (
+const Featured = ({ title, sub, img, width, height, link, linkName, links = [], priority = false, lazy = false }) => (
   <article className="card">
     <a href={link} target="_blank" rel="noreferrer">
       <img
         className="cover"
         src={img}
+        srcSet={`${img.replace("/img/", "/img/thumb/")} 640w, ${img} ${width}w`}
+        sizes="(min-width: 960px) 446px, (min-width: 720px) calc(50vw - 34px), calc(100vw - 40px)"
         alt={title}
         width={width}
         height={height}
-        fetchPriority="high"
+        fetchPriority={priority ? "high" : undefined}
+        loading={lazy ? "lazy" : undefined}
       />
     </a>
     <div className="card-body">

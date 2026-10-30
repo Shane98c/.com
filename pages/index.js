@@ -4,13 +4,22 @@ import Project from "../components/Project";
 
 const featured = [
   {
-    img: "/img/flyover.webp",
-    width: 1280,
-    height: 540,
+    img: "/img/flyover-country.webp",
+    width: 1600,
+    height: 900,
     title: "Flyover Country",
-    sub: "Guide to the window seat. An offline flight map that reveals the geology, ecosystems, and human works below your airplane window, with a live view that labels landmarks, 3D terrain, and guides to clouds and landscapes.",
+    sub: "Guide to the window seat. An offline flight map that reveals the geology, ecosystems, and human works below your airplane window, with 3D terrain, guides to clouds and landscapes, and augmented reality that labels landmarks on your camera's view.",
     linkName: "flyovercountry.app",
     link: "https://flyovercountry.app/",
+  },
+  {
+    img: "/img/outcrop-app.webp",
+    width: 1600,
+    height: 900,
+    title: "Outcrop",
+    sub: "Read the rocks around you. A geology app that shows the geologic map wherever you are and drapes it over the hills in front of you in augmented reality, each rock unit named. Pull up any unit for its age, fossils found nearby, and where it lay on the globe when it formed. Works offline.",
+    linkName: "outcrop.rocks",
+    link: "https://outcrop.rocks/",
   },
   {
     img: "/img/farseer.webp",
@@ -30,6 +39,9 @@ const featured = [
     linkName: "View the story at ProPublica",
     link: "https://www.propublica.org/article/bluestone-jim-justice-north-birmingham",
   },
+];
+
+const projects = [
   {
     img: "/img/zarr-layer.webp",
     width: 1600,
@@ -43,9 +55,6 @@ const featured = [
       { name: "GitHub", href: "https://github.com/carbonplan/zarr-layer" },
     ],
   },
-];
-
-const projects = [
   {
     img: "/img/live-geoembeddings.webp",
     width: 1200,
@@ -164,8 +173,8 @@ export default function Home() {
     >
       <section className="section">
         <div className="featured">
-          {featured.map((project) => (
-            <Featured key={project.title} {...project} />
+          {featured.map((project, i) => (
+            <Featured key={project.title} {...project} priority={i === 0} lazy={i >= 2} />
           ))}
         </div>
       </section>

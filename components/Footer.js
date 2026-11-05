@@ -1,11 +1,6 @@
-const links = [
-  ["Email", "mailto:shane98c@gmail.com"],
-  ["GitHub", "https://github.com/shane98c"],
-  ["LinkedIn", "https://www.linkedin.com/in/shane-loeffler/"],
-  ["Instagram", "https://www.instagram.com/shane98c/"],
-  ["Bluesky", "https://bsky.app/profile/shaneloeffler.com"],
-  ["Twitter", "https://twitter.com/shane98c"],
-];
+import { SOCIAL_LINKS } from "../lib/site";
+
+const links = [["Email", "mailto:shane98c@gmail.com"], ...SOCIAL_LINKS];
 
 const Footer = () => (
   <footer className="footer">

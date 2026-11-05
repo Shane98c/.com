@@ -43,6 +43,8 @@ const posts = [
   },
 ];
 
+export const config = { unstable_runtimeJS: false };
+
 export default function Writing() {
   return (
     <Layout
@@ -52,8 +54,8 @@ export default function Writing() {
     >
       <section className="section">
         <div className="work">
-          {posts.map((post) => (
-            <Post key={post.title} {...post} />
+          {posts.map((post, i) => (
+            <Post key={post.title} {...post} priority={i === 0} />
           ))}
         </div>
       </section>

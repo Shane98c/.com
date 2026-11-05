@@ -26,7 +26,7 @@ const Header = () => (
       </div>
       <img
         className="avatar"
-        src="https://avatars.githubusercontent.com/u/14908734?s=168"
+        src="/img/avatar.jpg"
         alt="Shane Loeffler"
         width="84"
         height="84"

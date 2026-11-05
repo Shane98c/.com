@@ -5,7 +5,7 @@ const Featured = ({ title, sub, img, width, height, link, linkName, links = [], 
       <img
         className="cover"
         src={img}
-        srcSet={`${img.replace("/img/", "/img/thumb/")} 640w, ${img} ${width}w`}
+        srcSet={`${img.replace("/img/", "/img/thumb/")} 640w, ${img.replace("/img/", "/img/md/")} 960w, ${img} ${width}w`}
         sizes="(min-width: 960px) 446px, (min-width: 720px) calc(50vw - 34px), calc(100vw - 40px)"
         alt={title}
         width={width}
